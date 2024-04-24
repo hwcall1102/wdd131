@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+header {
+    background-color: #434371;
+    grid-column: 1 / 6;
+    color: #dbcbd8;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 0;
+    height: 200px;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #9ad4d6;
+    font-family: Helvetica, sans-serif;
+    color: #434371;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 55px;
+}
+nav a {
+    text-align: left;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20pt;
+}
+nav a:hover {
+    text-decoration: overline;
+    text-decoration-color: #434371;
+}
+main {
+    background: #f2fdff;
+    grid-column: 1 / 5;
+    color: #434371;
+    text-align:left;
+    margin: 1rem;
+    margin-top: 30px;
+    height: 450px;
+    max-width: 1200px;
+    justify-self: center;
+    font-family: helvetica;
+    border:1px solid #434371;
+    border-radius: 1em;
+    
+}
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.about h1 {
+    grid-column: 1/4;
+    background-color: #434371;
+    color:#dbcbd8;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 0;
+    font-family: 'montserrat';
+    border-radius: .5em .5em 0em 0em;
+}
+.about img {
+    display: block;
+    margin: 10px;
+    margin-left: 75px;
+    text-align:right;
+    grid-column: 3/4;
+    border-radius: 1em;    
+}
+.about p {
+    text-align: justify;
+    font-size: 25px;
+    float: left;
+    grid-column: 1/3;
+    padding: 1rem;
+}
+
+.resources {
+    background: #f2fdff;
+    color:#434371;
+    grid-column: 5 / 6;
+    margin: 1rem;
+    margin-top: 30px;
+    margin-bottom: 1rem;
+    height: 450px;
+    border: 1px solid #434371;
+    border-radius: 1em;
+}
+.resources h1 {
+    background-color: #434371;
+    color: #dbcbd8;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'montserrat';
+    margin-top: 0;
+    border-radius: .5em .5em 0em 0em;
+}
+.resources li {
+    padding: 5px;
+    list-style-type: none;
+    font-size: 25px;
+    padding: 20px;
+    font-family: helvetica;
+}
+footer {
+    background: #434371;
+    text-align: center;
+    grid-column: 1 / 6;
+    color: #dbcbd8;
+    font-size: 20pt;
+    font-family: helvetica;
+}
+.modified {
+    color:#9ad4d6;
+    margin-top: 0;
+}
