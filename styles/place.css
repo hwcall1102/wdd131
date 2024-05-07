@@ -1,0 +1,19 @@
+.hero img {
+    width: 100%;
+    height: auto;
+    max-width: 1500px;
+}
+
+
+
+footer {
+    width: auto;
+    margin: 1rem auto;
+    background-color: navy;
+    border: solid 1px;
+    border-color: blue;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 20pt;  
+}
