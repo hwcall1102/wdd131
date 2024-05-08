@@ -1,9 +1,8 @@
-/* union jack hex codes, White, red: #c8102e blue: #012169 */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
     font-family: 'Roboto';
+    width: auto;
 }
 
 header {
@@ -21,7 +20,8 @@ h1 {
     font-size: 45pt;
     font: 400;
 }
-.hero img {
+
+.hero img{
     width: 100%;
     height: auto;
     max-width: 1500px;
@@ -39,9 +39,7 @@ ol {
     list-style-position: inside;
 }
 
-.weather::after {
-    content: '  🌥'
-}
+
 h2 {
     border-bottom: 1px solid #c8102e;
     padding: 1rem;

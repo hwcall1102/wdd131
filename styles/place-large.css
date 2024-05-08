@@ -39,4 +39,8 @@
         margin-top: 0;
     }
 
+    .weather::after {
+        content: '  🌥'
+    }
+
 }
