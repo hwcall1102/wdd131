@@ -46,6 +46,9 @@ h2 {
     font:400;
     font-size: 30pt;
 }
+svg {
+    border: solid 1px;
+}
 
 /* labels for each list item */
 .area {
