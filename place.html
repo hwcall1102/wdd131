@@ -3,43 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>England Information</title>
+        <title>United Kindom Information</title>
         <meta name="author" content="Hayden Call" >
-        <meta name="description" content="Basic information and weather for the country of England." >
+        <meta name="description" content="Basic information and weather for the United Kingdom." >
         <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
         <script src="scripts/place.js" defer></script>
     </head>
 <body>
     <header>
-        <h1>England</h1>
+        <h1>United Kingdom</h1>
     </header>
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/hero-large.jpg" media="(min-width: 1000px)">
-                <img src="images/hero-small.jpg" alt="British Parliment in London" width="500" height="250">
+                <source srcset="images/hero-large.webp" media="(min-width: 1260px)">
+                <img src="images/hero-small.webp" alt="British Parliment in London" width="500" height="330">
             </picture>
         </div>
-        <section class="data">
+        <section class="list1">
             <h2>Data</h2>
             <ol>
-                <li>Area:  Value</li>
-                <li>Poplulation:  Value</li>
-                <li>Capital:  London</li>
-                <li>Languages:  Value</li>
-                <li>Currency:  Value</li>
-                <li>Time Zone:  Value</li>
-                <li>Calling Code: Value</li>
-                <li>Internet TLD:  Value</li>
+                <li class="area">94,058 square miles</li>
+                <li class="population">66.97 million</li>
+                <li class="capital">London</li>
+                <li class="languages">English</li>
+                <li class="currency">Pound sterling (GBP)</li>
+                <li class="timezone">UTC+0 (GMT)</li>
+                <li class="code">+44</li>
+                <li class="inttld">.uk</li>
             </ol>
         </section>
-        <section class="Weather">
-            <h2>Weather</h2>
+        <section class="list2">
+            <h2 class="weather">Weather</h2>
             <ol>
-                <li>Temperature: 20*C</li>
-                <li>Conditions: Partly Cloudy</li>
-                <li>Wind: 10 mph</li>
-                <li>Wind Chill: Value</li>
+                <li class="temp">20°C</li>
+                <li class="conditions">Partly Cloudy</li>
+                <li class="wind">10 mph</li>
+                <li class="windchill">Value</li>
             </ol>
         </section>
     </main>

@@ -1,13 +1,95 @@
+/* union jack hex codes, White, red: #c8102e blue: #012169 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    font-family: 'Roboto';
+}
+
+header {
+    width: auto;
+    max-width: 1600px;
+    margin: 1rem auto;
+    background-color: #012169;
+    border: solid 10px;
+    border-color: #c8102e;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 45pt;
+    font: 400;
+}
 .hero img {
     width: 100%;
     height: auto;
     max-width: 1500px;
 }
 
+/*centering lists for mobile */
+.list1, .list2 {
+    text-align: center;
+}
+ol {
+    display: inline-block;
+    text-align: left;
+    line-break: loose;
+    font-size: 16pt;
+    list-style-position: inside;
+}
 
+.weather::after {
+    content: '  🌥'
+}
+h2 {
+    border-bottom: 1px solid #c8102e;
+    padding: 1rem;
+    font:400;
+    font-size: 30pt;
+}
+
+/* labels for each list item */
+.area {
+    list-style: 'Area: ';
+}
+.population {
+    list-style: 'Population: ';
+}
+.capital {
+    list-style: 'Capital: ';
+}
+.languages {
+    list-style: 'Languages: ';
+}
+.currency {
+    list-style: 'Currency: ';
+}
+.timezone {
+    list-style: 'Time Zone: ';
+}
+.code {
+    list-style: 'Calling Code: ';
+}
+.inttld {
+    list-style: 'Internet TLD: ';
+}
+.temp {
+    list-style: 'Temperature: ';
+}
+.conditions {
+    list-style: 'Conditions: ';
+}
+.wind {
+    list-style: 'Wind: ';
+}
+.windchill {
+    list-style: 'Wind Chill: '
+}
 
 footer {
     width: auto;
+    max-width: 1600px;
     margin: 1rem auto;
     background-color: navy;
     border: solid 1px;
@@ -15,5 +97,7 @@ footer {
     padding: 1rem;
     color: white;
     text-align: center;
-    font-size: 20pt;  
+    font-size: 16pt;  
+    border: solid 10px;
+    border-color: #c8102e;
 }
