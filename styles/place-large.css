@@ -17,7 +17,6 @@
     .list1, .list2{
         background-color: rgba(255, 255, 255, .8);
         max-width: 533.33px;
-        min-width: 425;
     }
     .list1 {
         grid-column: 5/2;
