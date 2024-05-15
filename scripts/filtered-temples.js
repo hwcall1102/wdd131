@@ -103,7 +103,7 @@ const temples = [
 ];
 const container = document.getElementById('image-container');
 
-const imageTags = temples.map((img) => `<div id='image-tile'><h2>${img.templeName}</h2><p>Location: ${img.location}</p><p>Dedicated: ${img.dedicated}</p><p>Size: ${img.area} sq ft</p><img src="${img.imageUrl}" alt="${img.templeName} loading="lazy" height=250></div>`);
+const imageTags = temples.map((img) => `<figure id='image-tile'><figcaption><h2>${img.templeName}</h2><p>Location: ${img.location}</p><p>Dedicated: ${img.dedicated}</p><p>Size: ${img.area} sq ft</p></figcaption><img src="${img.imageUrl}" alt="${img.templeName} loading="lazy" height=250></figure>`);
 
 container.innerHTML = imageTags.join('');
 
