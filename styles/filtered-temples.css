@@ -30,6 +30,7 @@ h1 {
 	top: 3rem;
 	right: 1rem;
     background-color: navy;
+    flex: 1 1 1 1 1;
 }
 
 #menu::before {
