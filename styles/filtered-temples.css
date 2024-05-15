@@ -90,19 +90,23 @@ main {
     margin: auto;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
 }
-#image-tile {
+section {
     background: lightgray;
-    border: solid royalblue 2.5px;
+    border: solid royalblue 1px;
     text-align: center;
     padding: 20px;
+    color: black;
+}
+h3 {
+    font: bolder;
+}
+.label {
+    color: navy;
 }
 img {
     box-shadow: 0 0 10px black;
-}
-figcaption {
-    caption-side: top;
 }
 
 figure {

@@ -77,7 +77,7 @@ const temples = [
 	  "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
 	},
 	{
-		templeName: "Bountiful Utah Temple",
+		templeName: "Bountiful Utah",
 		location: "Bountiful, Utah, United States",
 		dedicated: "1995, January, 8",
 		area: 104000,
@@ -85,7 +85,7 @@ const temples = [
 		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-766347-wallpaper.jpg"
 	},
 	{
-		templeName: "Palmyra New York Temple",
+		templeName: "Palmyra New York",
 		location: "Palmyra, New York, United States",
 		dedicated: "2000, April, 6",
 		area: 10900,
@@ -93,7 +93,7 @@ const temples = [
 		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/palmyra-new-york/400x250/palmyra-new-york-mormon-temple-882900-high-res-print.jpg"
 	},
 	{
-		templeName: "Seoul Korea Temple",
+		templeName: "Seoul Korea",
 		location: "Seoul, South Korea",
 		dedicated: "1985, December, 14",
 		area: 28057,
@@ -101,11 +101,61 @@ const temples = [
 		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seoul-korea/400x250/seoul-korea-temple-lds-424784-wallpaper.jpg"		
 	},
 ];
-const container = document.getElementById('image-container');
 
-const imageTags = temples.map((img) => `<figure id='image-tile'><figcaption><h2>${img.templeName}</h2><p>Location: ${img.location}</p><p>Dedicated: ${img.dedicated}</p><p>Size: ${img.area} sq ft</p></figcaption><img src="${img.imageUrl}" alt="${img.templeName} loading="lazy" height=250></figure>`);
+createTempleCard(temples);
 
-container.innerHTML = imageTags.join('');
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
 
+homeLink.addEventListener("click", () => {
+	createTempleCard(temples);
+});
 
+oldLink.addEventListener("click", () => {
+	createTempleCard(temples.filter(temple => temple.dedicated.includes("18")));
+});
+
+newLink.addEventListener("click", () => {
+	createTempleCard(temples.filter(temple => temple.dedicated.includes("20")));
+});
+
+largeLink.addEventListener("click", () => {
+	createTempleCard(temples.filter(temple => temple.area>90000));
+});
+
+smallLink.addEventListener("click", () => {
+	createTempleCard(temples.filter(temple => temple.area<10000));
+});
+
+function createTempleCard(filteredTemples) {
+	document.querySelector("#image-container").innerHTML = "";
+	filteredTemples.forEach(temple => {
+		let card = document.createElement("section");
+		let name = document.createElement("h3");
+		let location = document.createElement("p");
+		let dedication = document.createElement("p");
+		let area = document.createElement("p");
+		let img = document.createElement("img");
+
+		name.textContent = temple.templeName;
+		location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+		dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+		area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+		img.setAttribute("src", temple.imageUrl);
+		img.setAttribute("alt", `${temple.templeName} Temple`);
+		img.setAttribute("loading", "lazy");
+		img.setAttribute("height", 250);
+		
+		card.appendChild(name);
+		card.appendChild(location);
+		card.appendChild(dedication);
+		card.appendChild(area);
+		card.appendChild(img);
+
+		document.querySelector("#image-container").appendChild(card);
+	});
+}
 
