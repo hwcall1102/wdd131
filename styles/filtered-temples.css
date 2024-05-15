@@ -76,15 +76,31 @@ h1 {
 
 main {
     width:auto;
+    grid-gap: 0;
+    margin: auto;
+    background-color: white;
+    margin: 0 auto;    
+    color: navy;
+}
+#image-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0;
-    margin: 1rem;
-    background-color: white;
-    margin: auto;    
-    color: navy;
-    
+    grid-gap: 1rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
 }
+#image-tile {
+    background: lightgray;
+    border: solid royalblue 2.5px;
+    text-align: center;
+    padding: 20px;
+}
+img {
+    box-shadow: 0 0 10px black;
+}
+
 
 figure {
     text-align: center;
@@ -92,10 +108,7 @@ figure {
     padding-bottom: 5px;
     color: navy;    
 }
-img {
-    display: block;
-    margin: auto;
-}
+
 h2 {
     text-align: center;
 }

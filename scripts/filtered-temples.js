@@ -18,6 +18,7 @@ hambutton.addEventListener('click', () => {
 	hambutton.classList.toggle('show');
 });
 
+// image content
 const temples = [
 	{
 	  templeName: "Aba Nigeria",
@@ -75,14 +76,36 @@ const temples = [
 	  imageUrl:
 	  "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
 	},
-	// Add more temple objects here...
 	{
-		templeName: "Layton Utah",
-		location: "Layton, Utah",
-		dedicated: "2024, June, 16",
-		area: 
-		imageUrl
-	}
-  ];
+		templeName: "Bountiful Utah Temple",
+		location: "Bountiful, Utah, United States",
+		dedicated: "1995, January, 8",
+		area: 104000,
+		imageUrl: 
+		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/400x250/bountiful-temple-766347-wallpaper.jpg"
+	},
+	{
+		templeName: "Palmyra New York Temple",
+		location: "Palmyra, New York, United States",
+		dedicated: "2000, April, 6",
+		area: 10900,
+		imageUrl: 
+		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/palmyra-new-york/400x250/palmyra-new-york-mormon-temple-882900-high-res-print.jpg"
+	},
+	{
+		templeName: "Seoul Korea Temple",
+		location: "Seoul, South Korea",
+		dedicated: "1985, December, 14",
+		area: 28057,
+		imageUrl:
+		"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seoul-korea/400x250/seoul-korea-temple-lds-424784-wallpaper.jpg"		
+	},
+];
+const container = document.getElementById('image-container');
+
+const imageTags = temples.map((img) => `<div id='image-tile'><h2>${img.templeName}</h2><p>Location: ${img.location}</p><p>Dedicated: ${img.dedicated}</p><p>Size: ${img.area} sq ft</p><img src="${img.imageUrl}" alt="${img.templeName} loading="lazy" height=250></div>`);
+
+container.innerHTML = imageTags.join('');
+
 
 
