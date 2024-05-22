@@ -36,14 +36,14 @@ const products = [
     }
 ];
 
-createSelector(products);
+createOption(products);
 
-function createSelector(filteredProducts) {
+function createOption(filteredProducts) {
     document.querySelector("#dropdown").innerHTML= "";
     filteredProducts.forEach(product => {
         let newProduct = document.createElement("option");
-        newProduct.textContent = newProduct.name;
-        newProduct.setAttribute("value", newProduct.id);
+        newProduct.textContent = product.name;
+        newProduct.setAttribute("value", `${product.id}`);
         
         document.querySelector("#dropdown").appendChild(newProduct);
     });
