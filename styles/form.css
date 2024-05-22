@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+:root {
+    --primary-color: #434371 ;
+    --secondary-color: #DBCBD8 ;
+    --accent1-color: #F2FDFF;
+    --accent2-color: #9AD4D6;
+}
+header, footer {
+    width: auto;
+    margin: 1rem auto;
+    background-color: var(--primary-color);
+    border: solid 1px;
+    border-color: var(--accent2-color);
+    border-radius: 6px;
+    padding: 1rem;
+    color: var(--accent1-color);
+    text-align: center;
+}
+
+.rf1 fieldset {
+    margin: 1rem 0;
+    border: 1px solid var(--accent2-color);
+    border-radius: 6px;
+    padding: .5rem 2%;
+    background-color: var(--secondary-color);
+}
+
+.rf1 label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-size: .9rem;
+}
+
+.rf1 select,
+.rf1 input[type="text"],
+.rf1 input[type="date"]
+ {
+    display: block;
+    background-color: var(--accent1-color);
+    border: solid 1px var(--accent2-color);
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.rf1 textarea {
+    display: block;
+    background-color: var(--accent1-color);
+    border: solid 1px var(--accent2-color);
+    border-radius: 6px;
+    padding: .75rem;
+    height: 4rem;
+    color: var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.rf1 input[type="radio"],
+.rf1 input[type="checkbox"]
+{
+    margin-right: 6px;
+}
+
+.rf1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--secondary-color), var(--primary-color));
+    color: var(--accent1-color);
+    border-radius: 6px;
+    padding: .8rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 2% 1rem 2%;
+}

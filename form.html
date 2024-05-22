@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="author" content="Hayden Call" >
+    <meta name="description" content="A form for issuing a product review" >
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="rf1">
+            <fieldset>
+                <!-- product name drop down list -->                
+                <label>Product Name* 
+                    <select id="dropdown" name="subject" required>
+                        <option value="" disabled selected>Select a Product ... &#9662;</option>                
+                    </select>
+                </label>
+
+                <!-- rating radios -->
+                <label>Overall Rating* </label>
+                <label><input type="radio" id="stars" name="rating" value="one" required>☆</label>
+                <label><input type="radio" id="stars" name="rating" value="two" required>☆☆</label>
+                <label><input type="radio" id="stars" name="rating" value="three" required>☆☆☆</label>
+                <label><input type="radio" id="stars" name="rating" value="four" required>☆☆☆☆</label>
+                <label><input type="radio" id="stars" name="rating" value="five" required>☆☆☆☆☆</label>
+                
+                <!-- install date entry -->
+                <label>Date of Installation* <input type="date" id="install"name="installDate" required></label>
+
+                <!-- features check boxes -->
+                <label>Which features did you find useful in the product?<br>(Check all that apply)</label>
+                <label><input type="checkbox" id="features" name="durability" value="YES"> Durability</label>
+                <label><input type="checkbox" id="features" name="ease" value="YES"> Ease of Use</label>
+                <label><input type="checkbox" id="features" name="performance" value="YES"> Performance</label>
+                <label><input type="checkbox" id="features" name="design" value="YES"> Design</label>
+
+                <!-- Written review -->
+                <label>Written Review <tr>(Optional)</tr><textarea id="written" name="written"></textarea></label>
+                
+
+                <!-- Reviewer Name -->
+                <label>Your Name <tr>(Optional)</tr><input type="text" id="userName" name="userName"></label>
+
+                <input type="submit" id="button" value="Post Review">
+            </fieldset>
+
+            <!-- button -->
+            
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Hayden Call United States of America</p>
+        <p class="modified"><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
