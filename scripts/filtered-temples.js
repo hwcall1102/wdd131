@@ -157,5 +157,5 @@ function createTempleCard(filteredTemples) {
 
 		document.querySelector("#image-container").appendChild(card);
 	});
-}
+};
 
